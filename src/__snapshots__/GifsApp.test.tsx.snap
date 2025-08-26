@@ -1,0 +1,71 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`GifsApp > should render component properly 1`] = `
+<div>
+  <div
+    class="min-h-screen bg-gray-100 text-gray-900 font-sans"
+  >
+    <header
+      class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white shadow-md"
+    >
+      <div
+        class="max-w-3xl mx-auto px-6 py-6 text-center"
+      >
+        <h1
+          class="text-3xl font-bold tracking-tight drop-shadow-md"
+        >
+          Gifs App
+        </h1>
+        <p
+          class="text-base mt-2 opacity-90 text-description"
+        >
+            Descubre y comparte los mejores gifs animados 🎉
+        </p>
+      </div>
+    </header>
+    <section
+      class="max-w-3xl mx-auto px-6 py-6"
+    >
+      <div
+        class="flex gap-2"
+      >
+        <input
+          class="flex-1 px-3 py-2 text-sm border border-gray-300 rounded-md bg-white placeholder-gray-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none"
+          placeholder="Buscar gifs ya!!"
+          type="text"
+          value=""
+        />
+        <button
+          class="px-4 py-2 text-sm font-medium bg-gray-900 text-white rounded-md hover:bg-gray-800 transition-colors"
+        >
+          Buscar
+        </button>
+      </div>
+    </section>
+    <section
+      class="max-w-3xl mx-auto px-6 py-4"
+    >
+      <h2
+        class="text-base font-medium text-gray-800 mb-2"
+      >
+        Búsquedas previas
+      </h2>
+      <ul
+        class="flex gap-2 flex-wrap"
+      />
+    </section>
+    <section
+      class="max-w-5xl mx-auto px-6 py-6"
+    >
+      <h2
+        class="text-base font-medium text-gray-800 mb-2 text-center"
+      >
+        No se encontraron resultados
+      </h2>
+      <div
+        class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6"
+      />
+    </section>
+  </div>
+</div>
+`;

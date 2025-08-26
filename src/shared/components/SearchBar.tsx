@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import type { KeyboardEvent } from "react";
 
-
 interface Props {
   placeholder?: string;
   onQuery: (query: string) => void;
@@ -12,16 +11,20 @@ export const SearchBar = ({ placeholder, onQuery }: Props) => {
 
   const handleSubmit = () => {
     onQuery(query);
-    setQuery("");
+    // setQuery("");
   };
 
-useEffect(() => {
-  if (query === "") {
-    onQuery("");
-  }
-}, [query]); // 👈 solo query
+  useEffect(() => {
+    if (!query.trim()) return;
 
+    const timeoutId = setTimeout(() => {
+      onQuery(query);
+    }, 700);
 
+    return () => clearTimeout(timeoutId);
+  }, [query]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  
   const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter" && query.trim() !== "") {
       handleSubmit();
